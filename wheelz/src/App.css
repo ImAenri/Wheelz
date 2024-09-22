@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.title{
+  font-family: albertBold;
+  font-size: 64px;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle{
+  font-family: albertReg;
+  font-size: 24px;
+}
+
+@font-face {
+  font-family: albertReg;
+  src: url(../public/AlbertSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: albertBold;
+  src: url(../public/AlbertSans-Bold.ttf);
+}
