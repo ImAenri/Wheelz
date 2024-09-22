@@ -1,20 +1,40 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Alert, Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{userSelect:"none"}}>
       <header className="App-header">
         <Container fluid>
           <Row style={{height:"100vh"}}>
             <Col md={7} style={{backgroundColor:"#EDEDED"}}>
-              <p className='title'>Sign in to Wheelz</p>
+              <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Sign in to Wheelz</p>
+              <button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon icon={faFacebookF}/></button>
+              <button className='socialBtn'><FontAwesomeIcon icon={faGoogle}/></button>
+              <button className='socialBtn'><FontAwesomeIcon icon={faApple}/></button>
+              <form style={{marginTop:"100px"}}>
+                <div>
+                  <FontAwesomeIcon icon={faEnvelope} className="inputIcon"/>
+                  <input type="email" placeholder="Email" className="inputBox" style={{fontFamily:"albertReg"}} required/>
+                </div>
+                <div style={{marginTop:"30px", marginBottom:"15px"}}>
+                  <FontAwesomeIcon icon={faLock} className="inputIcon"/>
+                  <input type="password" placeholder="Password" className="inputBox" style={{fontFamily:"albertReg"}} required/>
+                </div>
+              </form>
+              <a className="forgotPass">Forgot your password?</a>
+              <div>
+                <button className='sgnInBtn'>Sign In</button>
+              </div>
             </Col>
             <Col md={5} style={{backgroundColor:"#82060D"}}>
               <p className='title' style={{marginTop:"35%"}}>Hello, Wheelerz!</p>
-              <p className='subtitle'>Enjoy your personal details and<br></br>start your journey with us</p>
-              <Button>Test Button</Button>
+              <p className='subtitle'>Enter your personal details and<br></br>start your journey with us</p>
+              <button className='sgnUpBtn'>Sign Up</button>
             </Col>
           </Row>
         </Container>
