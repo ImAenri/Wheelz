@@ -13,9 +13,9 @@ function App() {
           <Row style={{height:"100vh"}}>
             <Col md={7} style={{backgroundColor:"#EDEDED"}}>
               <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Sign in to Wheelz</p>
-              <button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon icon={faFacebookF}/></button>
-              <button className='socialBtn'><FontAwesomeIcon icon={faGoogle}/></button>
-              <button className='socialBtn'><FontAwesomeIcon icon={faApple}/></button>
+              <button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon className="socialIcon" icon={faFacebookF}/></button>
+              <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faGoogle}/></button>
+              <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faApple}/></button>
               <form style={{marginTop:"100px"}}>
                 <div>
                   <FontAwesomeIcon icon={faEnvelope} className="inputIcon"/>
