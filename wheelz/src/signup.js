@@ -1,11 +1,13 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import './login.css';
+import './signup.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
-function login(){
+function signup(){
+
     return (
         <div className="App" style={{userSelect:"none"}}>
             <header className="App-header">
@@ -15,7 +17,7 @@ function login(){
                             <p className='logo'>WHEELZ</p>
                             <p className='title' style={{marginTop:"26%"}}>Welcome Back!</p>
                             <p className='subtitle'>To keep connected with us, please<br></br>login with your personal info</p>
-                            <button className='logInBtn'>Log In</button>
+                            <Link to="/" className="logInBtn">Log In</Link>
                         </Col>
                         <Col md={7} style={{backgroundColor:"#EDEDED"}}>
                             <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Create Account</p>
@@ -37,7 +39,7 @@ function login(){
                                 </div>
                             </form>
                             <div>
-                                <button className='RegBtn'>Sign Up</button>
+                                <Link to="/" className="regBtn">Sign up</Link>
                             </div>
                         </Col>
                     </Row>
@@ -47,4 +49,4 @@ function login(){
     )
 }
 
-export default login;
+export default signup;

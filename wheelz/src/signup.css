@@ -56,6 +56,8 @@
     box-shadow: inset 0 0 0 2px #ffffff;
     background-color: transparent;
     height: 48px;
+    text-decoration: none;
+    padding-top: 25px;
 }
   
 .logInBtn:hover{
@@ -63,7 +65,7 @@
     background-color: #ffffff;
 }
 
-.RegBtn{
+.regBtn{
     font-family: albertBold;
     display: inline-block;
     outline: none;
@@ -86,13 +88,15 @@
     color: #EDEDED;
     background-color: #82060D;
     height: 48px;
+    text-decoration: none;
+    padding-top: 25px;
 }
   
 .socialIcon{
     color: #282c34;
 }
   
-.RegBtn:hover{
+.regBtn:hover{
     color: #82060D;
     background-color: #EDEDED;
     border-color: #82060D;

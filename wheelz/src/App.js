@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'react-bootstrap';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
@@ -34,7 +35,7 @@ function App() {
             <Col md={5} style={{backgroundColor:"#82060D"}}>
               <p className='title' style={{marginTop:"35%"}}>Hello, Wheelerz!</p>
               <p className='subtitle'>Enter your personal details and<br></br>start your journey with us</p>
-              <button className='sgnUpBtn'>Sign Up</button>
+              <Link to="/signup" className="sgnUpBtn">Sign up</Link>
             </Col>
           </Row>
         </Container>
