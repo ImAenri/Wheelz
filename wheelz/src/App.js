@@ -12,7 +12,7 @@ function App() {
         <Container fluid>
           <Row style={{height:"100vh"}}>
             <Col md={7} style={{backgroundColor:"#EDEDED"}}>
-              <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Sign in to Wheelz</p>
+              <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Log in to Wheelz</p>
               <button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon className="socialIcon" icon={faFacebookF}/></button>
               <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faGoogle}/></button>
               <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faApple}/></button>
@@ -28,7 +28,7 @@ function App() {
               </form>
               <a className="forgotPass">Forgot your password?</a>
               <div>
-                <button className='sgnInBtn'>Sign In</button>
+                <button className='sgnInBtn'>Log In</button>
               </div>
             </Col>
             <Col md={5} style={{backgroundColor:"#82060D"}}>

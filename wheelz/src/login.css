@@ -1,0 +1,158 @@
+.App {
+    text-align: center;
+    user-select: none;
+}
+  
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.logo{
+    font-family: hammerSmithOne;
+    text-align: start;
+    margin-top: 7%;
+    margin-left: 15%;
+}
+
+.title{
+    font-family: albertBold;
+    font-size: 64px;
+    align-items: center;
+    justify-content: center;
+}
+  
+.subtitle{
+    font-family: albertReg;
+    font-size: 24px;
+}
+  
+.logInBtn{
+    font-family: albertBold;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 275px;
+    min-height: 75px;
+    margin-top: 10%;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    background-color: transparent;
+    height: 48px;
+}
+  
+.logInBtn:hover{
+    color: #82060D;
+    background-color: #ffffff;
+}
+
+.RegBtn{
+    font-family: albertBold;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 3px solid transparent;
+    letter-spacing: 2px;
+    min-width: 275px;
+    min-height: 75px;
+    margin-top: 70px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    color: #EDEDED;
+    background-color: #82060D;
+    height: 48px;
+}
+  
+.socialIcon{
+    color: #282c34;
+}
+  
+.RegBtn:hover{
+    color: #82060D;
+    background-color: #EDEDED;
+    border-color: #82060D;
+}
+  
+.socialBtn{
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    font-size: 130%;
+    margin-left: 50px;
+    transition: ease 0.3s;
+}
+  
+.socialBtn:hover{
+    background-color: #82060D;
+    border-color: #EDEDED;
+}
+  
+.socialBtn:hover .socialIcon{
+    color: #EDEDED;
+}
+  
+.inputSymbol{
+    position: absolute;
+    right: 40vw;
+    margin-top: 25px;
+    font-size: 20px;
+    color: #787878;
+}
+  
+.inputBox{
+    background-color: #D9D9D9;
+    padding: 20px;
+    padding-left: 75px;
+    width: 500px;
+    font-size: 20px;
+    border: none;
+    color: #787878;
+}
+  
+.inputBox:focus{
+    color: #82060D;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: albertReg;
+    src: url(../public/AlbertSans-Regular.ttf);
+}
+  
+@font-face {
+    font-family: albertBold;
+    src: url(../public/AlbertSans-Bold.ttf);
+}
+
+@font-face{
+    font-family: hammerSmithOne;
+    src: url(../public/HammersmithOne-Regular.ttf);
+}
+  
