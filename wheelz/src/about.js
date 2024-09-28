@@ -1,10 +1,10 @@
 import './about.css';
-import { NavLink } from 'react-router-dom'
+import Navbar from './navbar';
 
-function about() {
+const about = () => {
     return (
-        <div>
-
+        <div className="landing-page">
+            <Navbar />
         </div>
     )
 }

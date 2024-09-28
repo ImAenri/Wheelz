@@ -1,37 +1,21 @@
 import React from 'react';
 import './landing.css';
+import Navbar from './navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { NavLink } from 'react-router-dom'
 import { faMapMarkerAlt, faCarSide, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 const landing = () => {
-    const activeState = ({ isActive }) => {
-        return {
-          color: isActive ? "#82060D" : "",
-          fontWeight: isActive ? "bold" : ""
-        };
-      };
     return (
         <div className="landing-page">
-            <nav className="navbar">
-                <div className="logoLanding">WHEELZ</div>
-                <ul className="nav-links">
-                    <NavLink to="/landing" style={activeState}><li><a>Home</a></li></NavLink>
-                    <NavLink to="/cars" style={activeState}><li><a>Cars</a></li></NavLink>
-                    <NavLink to="/membership" style={activeState}><li><a>Membership</a></li></NavLink>
-                    <NavLink to="/about" style={activeState}><li><a>About</a></li></NavLink>
-                    <NavLink to="/contact" style={activeState}><li><a>Contact Us</a></li></NavLink>
-                </ul>
-                <div className="signup"><button className="signup-btn">Sign Up</button></div>
-            </nav>
+            <Navbar />
             <section className="main-section">
                 <div className="text-content">
                     <h1>Get More with<br></br>Every Ride</h1>
                     <p>Join our membership plan and enjoy exclusive rewards.</p>
                 </div>
                 <div className="car-image">
-                    <img src="../car.png" />
+                    <img src="../car.png" alt='Image of a Red BMW'/>
                 </div>
             </section>
             <div className="booking-form">

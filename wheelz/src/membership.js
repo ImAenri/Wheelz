@@ -1,10 +1,10 @@
 import './membership.css';
-import { NavLink } from 'react-router-dom'
+import Navbar from './navbar';
 
-function membership() {
+const membership = () => {
     return (
-        <div>
-
+        <div className="landing-page">
+            <Navbar />
         </div>
     )
 }

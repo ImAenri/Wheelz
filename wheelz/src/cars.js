@@ -1,10 +1,10 @@
 import './cars.css';
-import { NavLink } from 'react-router-dom'
+import Navbar from './navbar';
 
-function cars() {
+const cars = () => {
     return (
-        <div>
-
+        <div className="landing-page">
+            <Navbar />
         </div>
     )
 }
