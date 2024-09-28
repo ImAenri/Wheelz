@@ -156,6 +156,18 @@ input[type="date"] {
     min-width: 150px;
 }
 
+select, input[type="date"]:valid {
+    color: #282828;
+}
+
+select:invalid{
+    color: #787878;
+}
+
+select:focus{
+    color: #282828;
+}
+
 .signup{
     margin-bottom: 15px;
 }

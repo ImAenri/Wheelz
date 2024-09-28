@@ -22,23 +22,31 @@ const landing = () => {
                 <form className='form-section'>
                     <div className="form-group">
                         <label htmlFor="location"><FontAwesomeIcon icon={faMapMarkerAlt} className="icon" /> Location</label>
-                        <select id="location">
-                            <option>Select Location</option>
+                        <select id="location" required>
+                            <option value="" disabled selected>Select Location</option>
+                            <option value="cc" >Caloocan City</option>
+                            <option value="qc" >Quezon City</option>
+                            <option value="manila" >Manila</option>
+                            <option value="makati" >Makati</option>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="car-type"><FontAwesomeIcon icon={faCarSide} className="icon" /> Car Type</label>
-                        <select id="car-type">
-                            <option>Sedan</option>
+                        <select id="car-type" required>
+                            <option value="" disabled selected>Car Type</option>
+                            <option value="sedan" >Sedan</option>
+                            <option value="suv" >SUV</option>
+                            <option value="hybrid" >Hybrid</option>
+                            <option value="pickUp" >Pick Up</option>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="pickup-date"><FontAwesomeIcon icon={faCalendarAlt} className="icon" /> Pick-up Date</label>
-                        <input type="date" id="pickup-date" />
+                        <input type="date" id="pickup-date" required/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="return-date"><FontAwesomeIcon icon={faCalendarAlt} className="icon" /> Return Date</label>
-                        <input type="date" id="return-date" />
+                        <input type="date" id="return-date" required/>
                     </div>
                     <button type="submit" className="search-btn">Search</button>
                 </form>
