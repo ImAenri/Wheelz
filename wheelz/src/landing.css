@@ -146,9 +146,17 @@ label {
     color: #800000;
 }
 
-select,
 input[type="date"] {
     padding: 10px;
+    color: #787878;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 150px;
+}
+
+select {
+    padding: 12px;
     color: #787878;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -172,6 +180,12 @@ select:focus{
     margin-bottom: 15px;
 }
 
+.vl {
+    border-left: 2px solid #800000;
+    height: 75px;
+    margin-left: -30px;
+    margin-right: 35px;
+}
 /* Search Button */
 .search-btn {
     padding: 15px 30px;

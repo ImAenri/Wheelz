@@ -1,0 +1,25 @@
+.mainSection {
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 50px 0;
+}
+
+.coreText{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.coreText h1{
+    font-family: albertBold;
+    font-size: 78px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.coreText p{
+    font-size: 20px;
+    color: #666;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
