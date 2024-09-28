@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col} from 'react-bootstrap';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +29,7 @@ function App() {
               </form>
               <a className="forgotPass">Forgot your password?</a>
               <div>
-                <button className='sgnInBtn'>Log In</button>
+                <Link to="/landing"><button className='sgnInBtn'>Log In</button></Link>
               </div>
             </Col>
             <Col md={5} style={{backgroundColor:"#82060D"}}>

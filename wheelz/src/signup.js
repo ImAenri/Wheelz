@@ -15,7 +15,7 @@ function signup(){
                     <Row style={{height:"100vh"}}>
                         <Col md={5} style={{backgroundColor:"#82060D"}}>
                             <p className='logo'>WHEELZ</p>
-                            <p className='title' style={{marginTop:"26%"}}>Welcome Back!</p>
+                            <p className='title' style={{marginTop:"21%"}}>Welcome Back!</p>
                             <p className='subtitle'>To keep connected with us, please<br></br>login with your personal info</p>
                             <Link to="/" className="logInBtn">Log In</Link>
                         </Col>
