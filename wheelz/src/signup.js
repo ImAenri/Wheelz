@@ -16,14 +16,14 @@ function signup(){
                         <Col md={5} style={{backgroundColor:"#82060D"}}>
                             <p className='logo'>WHEELZ</p>
                             <p className='title' style={{marginTop:"21%"}}>Welcome Back!</p>
-                            <p className='subtitle'>To keep connected with us, please<br></br>login with your personal info</p>
+                            <p className='subtitle'>To keep connected with us, please<br></br>login with your credentials</p>
                             <Link to="/" className="logInBtn">Log In</Link>
                         </Col>
                         <Col md={7} style={{backgroundColor:"#EDEDED"}}>
-                            <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Create Account</p>
-                            <button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon className="socialIcon" icon={faFacebookF}/></button>
+                            <p className='title' style={{color:"#82060D", marginTop:"15%",marginBottom:"40px"}}>Create Account</p>
+                            {/*<button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon className="socialIcon" icon={faFacebookF}/></button>
                             <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faGoogle}/></button>
-                            <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faApple}/></button>
+                            <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faApple}/></button>*/}
                             <form style={{marginTop:"50px"}}>
                                 <div>
                                     <FontAwesomeIcon icon={faUser} className="inputSymbol"/>

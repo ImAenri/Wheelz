@@ -13,10 +13,10 @@ function App() {
         <Container fluid>
           <Row style={{height:"100vh"}}>
             <Col md={7} style={{backgroundColor:"#EDEDED"}}>
-              <p className='title' style={{color:"#82060D", marginTop:"10%",marginBottom:"40px"}}>Log in to Wheelz</p>
-              <button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon className="socialIcon" icon={faFacebookF}/></button>
+              <p className='title' style={{color:"#82060D", marginTop:"15%",marginBottom:"40px"}}>Log in to Wheelz</p>
+              {/*<button className='socialBtn' style={{marginLeft:"0px"}}><FontAwesomeIcon className="socialIcon" icon={faFacebookF}/></button>
               <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faGoogle}/></button>
-              <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faApple}/></button>
+              <button className='socialBtn'><FontAwesomeIcon className="socialIcon" icon={faApple}/></button>*/}
               <form style={{marginTop:"100px"}}>
                 <div>
                   <FontAwesomeIcon icon={faEnvelope} className="inputIcon"/>
@@ -33,7 +33,7 @@ function App() {
               </div>
             </Col>
             <Col md={5} style={{backgroundColor:"#82060D"}}>
-              <p className='title' style={{marginTop:"35%"}}>Hello, Wheelerz!</p>
+              <p className='title' style={{marginTop:"34%"}}>Hello, Wheelerz!</p>
               <p className='subtitle'>Enter your personal details and<br></br>start your journey with us</p>
               <Link to="/signup" className="sgnUpBtn">Sign up</Link>
             </Col>
