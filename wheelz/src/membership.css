@@ -23,3 +23,43 @@
     margin-top: 15px;
     letter-spacing: 0.5px;
 }
+
+.stndrdCard{
+    text-decoration:none;
+    color:#666;
+    transition: ease 0.3s;
+}
+
+.stndrdCard:hover{
+    color:#ffffff;
+}
+
+.premCard{
+    text-decoration:none;
+    color:#666;
+    transition: ease 0.3s;
+}
+
+.premCard:hover{
+    color:#ffffff;
+}
+
+.hoverStndrd{
+    background-color: #ffffff;
+    transition: ease 0.3s;
+}
+
+.hoverStndrd:hover{
+    color: #ffffff;
+    background-color: #82060D;
+}
+
+.hoverPrem{
+    background-color: #ffffff;
+    transition: ease 0.3s;
+}
+
+.hoverPrem:hover{
+    color: #996515;
+    background: linear-gradient(0deg, rgba(255,215,0,1) 55%, rgba(250,250,210,1) 92%);;
+}
