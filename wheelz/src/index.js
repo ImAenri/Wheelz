@@ -17,14 +17,14 @@ root.render(
   <React.StrictMode>
   <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Admin />}/>
+        <Route path="/" element={<App />}/>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/cars" element={<Cars />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<App />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
