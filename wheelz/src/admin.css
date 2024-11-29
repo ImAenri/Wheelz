@@ -68,7 +68,19 @@
     border: 1px solid #ccc;
     border-radius: 20px;
 }
-  
+
+.iconHover{
+    cursor: pointer;
+    transition: ease 0.3s;
+    font-size: 30px;
+    float: right;
+    padding-left: 15px;
+}
+
+.iconHover:hover{
+    color: #82060D;
+}
+
 .profile {
     display: flex;
     align-items: center;

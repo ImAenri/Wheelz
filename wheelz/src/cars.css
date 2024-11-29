@@ -22,3 +22,33 @@
     margin-top: 7rem;
     object-fit:contain;
 }
+
+.bookBtn{
+    padding: 15px 15px;
+    background-color: #800000;
+    color: white;
+    border: #800000 3px solid;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: albertReg;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.bookBtn:hover {
+    background-color: #EDEDED;
+    color: #800000;
+    border: #82060D 3px solid;
+}
+
+.bookBtn:disabled{
+    padding: 15px 15px;
+    background-color: #636363;
+    color: white;
+    border: #636363 3px solid;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: albertReg;
+    cursor: pointer;
+    transition: ease 0.3s;
+}

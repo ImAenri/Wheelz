@@ -1,11 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './landing.css';
 import Navbar from './navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faCarSide, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCarSide, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
+const Landing = () => {
+    const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        type: "",
+    });
 
-const landing = () => {
+    const handleChange = (e) => {
+        const { name, value } = e.target; // Extract name and value from the input
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value, // Dynamically update the corresponding field in formData
+        }));
+        console.log(name.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const queryParams = new URLSearchParams(formData).toString();
+        navigate(`/cars?${queryParams}`);
+    };
+
     return (
         <div className="landing-page">
             <Navbar />
@@ -19,25 +40,15 @@ const landing = () => {
                 </div>
             </section>
             <div className="booking-form">
-                <form className='form-section'>
-                    <div className="form-group">
-                        <label htmlFor="location" style={{marginBottom:"5px"}}><FontAwesomeIcon icon={faMapMarkerAlt} className="icon" /> Location</label>
-                        <select id="location" required>
-                            <option value="" disabled selected>Select Location</option>
-                            <option value="cc" >Caloocan City</option>
-                            <option value="qc" >Quezon City</option>
-                            <option value="manila" >Manila</option>
-                            <option value="makati" >Makati</option>
-                        </select>
-                    </div>
+                <form className='form-section' onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="car-type" style={{marginBottom:"5px"}}><FontAwesomeIcon icon={faCarSide} className="icon" /> Car Type</label>
-                        <select id="car-type" required>
+                        <select id="car-type" name="type" onChange={handleChange} value={formData.type} required>
                             <option value="" disabled selected>Car Type</option>
-                            <option value="sedan" >Sedan</option>
-                            <option value="suv" >SUV</option>
-                            <option value="hybrid" >Hybrid</option>
-                            <option value="pickUp" >Pick Up</option>
+                            <option value="Sedan" >Sedan</option>
+                            <option value="SUV" >SUV</option>
+                            <option value="Hybrid" >Hybrid</option>
+                            <option value="Sports" >Sports</option>
                         </select>
                     </div>
                     <div className='vl'></div>
@@ -56,4 +67,4 @@ const landing = () => {
     );
 }
 
-export default landing;
+export default Landing;

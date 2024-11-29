@@ -1,8 +1,31 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './admin.css';
+import {Link} from 'react-router-dom'
+import axios from 'axios';
+import Table from 'react-bootstrap/Table';
 
 
-const admin = () => {
+const Admin = () => {
+
+    const [bookings, setBookings] = useState([]);
+    const [error, setError] = useState("");
+
+    // Fetch all bookings
+    useEffect(() => {
+        const fetchBookings = async () => {
+            try {
+                const response = await axios.get("http://localhost:6543/api/bookings");
+                setBookings(response.data);
+            } catch (error) {
+                setError("Error fetching bookings");
+                console.error("Error fetching bookings:", error);
+            }
+        };
+
+        fetchBookings();
+    }, []);
+
+
   return (
     <div className="dashboard">
       {/* Sidebar */}
@@ -14,7 +37,7 @@ const admin = () => {
           <li>Car Types</li>
           <li>Car Specification</li>
           <li>Features</li>
-          <li>Car Listing</li>
+          <Link to="/carlist" style={{textDecoration:"none", color:"inherit"}}><li>Car Listing</li></Link>
           <li>Rental Transactions</li>
         </ul>
       </div>
@@ -33,7 +56,7 @@ const admin = () => {
         </div>
 
         {/* Statistics Section */}
-        <div className="statistics">
+        {/* <div className="statistics">
           <div className="stat-card">
             <div className="stat-left">
               <h2>Total Passengers</h2>
@@ -52,7 +75,7 @@ const admin = () => {
           </div>
         </div>
 
-        {/* Recent Car Bookings Section */}
+        {/* Recent Car Bookings Section }
         <div className="recent-bookings">
           <h2>Recent Car Bookings</h2>
           <table>
@@ -103,10 +126,46 @@ const admin = () => {
               </tr>
             </tbody>
           </table>
+        </div> */}
+                <div>
+            <h2>All Bookings</h2>
+            {error && <p>{error}</p>}
+            <Table striped bordered hover>
+                <thead style={{backgroundColor:"#82060D"}}>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>User ID</th>
+                        <th>Car ID</th>
+                        <th>Booking Date</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {bookings.length === 0 ? (
+                        <tr>
+                            <td colSpan="7">No bookings available.</td>
+                        </tr>
+                    ) : (
+                        bookings.map((booking) => (
+                            <tr key={booking.bookingid}>
+                                <td>{booking.bookingid}</td>
+                                <td>{booking.user_Id}</td>
+                                <td>{booking.car_Id}</td>
+                                <td>{booking.bookingDate}</td>
+                                <td>{booking.returnDate}</td>
+                                <td>{booking.status}</td>
+                                <td>${booking.amount.toFixed(2)}</td>
+                            </tr>
+                        ))
+                    )}
+                </tbody>
+            </Table>
         </div>
       </div>
     </div>
   );
 };
 
-export default admin;
+export default Admin;
